@@ -7,16 +7,24 @@
 //
 
 #import "HomeViewController.h"
-
-@interface HomeViewController ()
-
-@end
+#import <Parse/Parse.h>
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    //PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+    PFQuery *userQuery = [PFUser query];
+    [userQuery orderByAscending:@"username"];
+    [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error){
+            NSLog(@"Error: %@, %@", error, [error userInfo]);
+        } else{
+            self.allUsers = objects;
+            [self.tableView reloadData];
+        }
+    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -26,23 +34,25 @@
 
 #pragma mark - Table view data source
 //
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-//    return 0;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.allUsers count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"ItemCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+    PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+
+    cell.textLabel.text = user.username;
+    // Configure the cell...
+    
+    return cell;
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -87,5 +97,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+// hide bottom bar
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"showLogin"]) {
+//        [segue.destinationViewController setHidesBottomBarWhenPushed:YES];
+//    }
+//}
 
 @end

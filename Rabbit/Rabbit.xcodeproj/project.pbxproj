@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57982DEC1C1C64FA00B20E63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57982DEB1C1C64FA00B20E63 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		57DD71621C22F57D007B52B5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71601C22F57D007B52B5 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		57DD71631C22F57D007B52B5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71611C22F57D007B52B5 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		57982DEC1C1C64FA00B20E63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57982DEB1C1C64FA00B20E63 /* HomeViewController.m */; };
+		57DD71621C22F57D007B52B5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71601C22F57D007B52B5 /* Bolts.framework */; };
+		57DD71631C22F57D007B52B5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71611C22F57D007B52B5 /* Parse.framework */; };
 		57DD71661C22F5C7007B52B5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71651C22F5C7007B52B5 /* AudioToolbox.framework */; };
 		57DD71681C22F5D9007B52B5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71671C22F5D9007B52B5 /* CFNetwork.framework */; };
 		57DD716A1C22F5E2007B52B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71691C22F5E2007B52B5 /* CoreGraphics.framework */; };
@@ -19,14 +19,14 @@
 		57DD71721C22F604007B52B5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71711C22F604007B52B5 /* SystemConfiguration.framework */; };
 		57DD71741C22F60C007B52B5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71731C22F60C007B52B5 /* libz.tbd */; };
 		57DD71761C22F613007B52B5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71751C22F613007B52B5 /* libsqlite3.tbd */; };
-		57DD717A1C22F682007B52B5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DD71791C22F682007B52B5 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		57DD717D1C22F6A7007B52B5 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DD717C1C22F6A7007B52B5 /* SignupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		57DD717A1C22F682007B52B5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DD71791C22F682007B52B5 /* LoginViewController.m */; };
+		57DD717D1C22F6A7007B52B5 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57DD717C1C22F6A7007B52B5 /* SignupViewController.m */; };
 		F84CA1621C1829860011526A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F84CA1611C1829860011526A /* main.m */; };
 		F84CA1651C1829860011526A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F84CA1641C1829860011526A /* AppDelegate.m */; };
-		F84CA1681C1829860011526A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F84CA1671C1829860011526A /* ViewController.m */; };
 		F84CA16B1C1829860011526A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84CA1691C1829860011526A /* Main.storyboard */; };
 		F84CA16D1C1829860011526A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F84CA16C1C1829860011526A /* Assets.xcassets */; };
 		F84CA1701C1829860011526A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84CA16E1C1829860011526A /* LaunchScreen.storyboard */; };
+		F853B6251C23B119004B4331 /* UserControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F853B6241C23B119004B4331 /* UserControlViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,12 +51,12 @@
 		F84CA1611C1829860011526A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F84CA1631C1829860011526A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F84CA1641C1829860011526A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F84CA1661C1829860011526A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F84CA1671C1829860011526A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F84CA16A1C1829860011526A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F84CA16C1C1829860011526A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F84CA16F1C1829860011526A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F84CA1711C1829860011526A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F853B6231C23B119004B4331 /* UserControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserControlViewController.h; sourceTree = "<group>"; };
+		F853B6241C23B119004B4331 /* UserControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserControlViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +102,12 @@
 			children = (
 				57982DEA1C1C64FA00B20E63 /* HomeViewController.h */,
 				57982DEB1C1C64FA00B20E63 /* HomeViewController.m */,
-				F84CA1661C1829860011526A /* ViewController.h */,
-				F84CA1671C1829860011526A /* ViewController.m */,
 				57DD71781C22F682007B52B5 /* LoginViewController.h */,
 				57DD71791C22F682007B52B5 /* LoginViewController.m */,
 				57DD717B1C22F6A7007B52B5 /* SignupViewController.h */,
 				57DD717C1C22F6A7007B52B5 /* SignupViewController.m */,
+				F853B6231C23B119004B4331 /* UserControlViewController.h */,
+				F853B6241C23B119004B4331 /* UserControlViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -226,10 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DD717D1C22F6A7007B52B5 /* SignupViewController.m in Sources */,
-				F84CA1681C1829860011526A /* ViewController.m in Sources */,
 				F84CA1651C1829860011526A /* AppDelegate.m in Sources */,
 				F84CA1621C1829860011526A /* main.m in Sources */,
 				57982DEC1C1C64FA00B20E63 /* HomeViewController.m in Sources */,
+				F853B6251C23B119004B4331 /* UserControlViewController.m in Sources */,
 				57DD717A1C22F682007B52B5 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
