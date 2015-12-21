@@ -27,6 +27,7 @@
 		F84CA16D1C1829860011526A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F84CA16C1C1829860011526A /* Assets.xcassets */; };
 		F84CA1701C1829860011526A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84CA16E1C1829860011526A /* LaunchScreen.storyboard */; };
 		F853B6251C23B119004B4331 /* UserControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F853B6241C23B119004B4331 /* UserControlViewController.m */; };
+		F8E6EB391C280D8500D372C4 /* HomeItemDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E6EB381C280D8500D372C4 /* HomeItemDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		F84CA1711C1829860011526A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F853B6231C23B119004B4331 /* UserControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserControlViewController.h; sourceTree = "<group>"; };
 		F853B6241C23B119004B4331 /* UserControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserControlViewController.m; sourceTree = "<group>"; };
+		F8E6EB371C280D8500D372C4 /* HomeItemDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeItemDetailTableViewController.h; sourceTree = "<group>"; };
+		F8E6EB381C280D8500D372C4 /* HomeItemDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeItemDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 			children = (
 				57982DEA1C1C64FA00B20E63 /* HomeViewController.h */,
 				57982DEB1C1C64FA00B20E63 /* HomeViewController.m */,
+				F8E6EB371C280D8500D372C4 /* HomeItemDetailTableViewController.h */,
+				F8E6EB381C280D8500D372C4 /* HomeItemDetailTableViewController.m */,
 				57DD71781C22F682007B52B5 /* LoginViewController.h */,
 				57DD71791C22F682007B52B5 /* LoginViewController.m */,
 				57DD717B1C22F6A7007B52B5 /* SignupViewController.h */,
@@ -227,6 +232,7 @@
 			files = (
 				57DD717D1C22F6A7007B52B5 /* SignupViewController.m in Sources */,
 				F84CA1651C1829860011526A /* AppDelegate.m in Sources */,
+				F8E6EB391C280D8500D372C4 /* HomeItemDetailTableViewController.m in Sources */,
 				F84CA1621C1829860011526A /* main.m in Sources */,
 				57982DEC1C1C64FA00B20E63 /* HomeViewController.m in Sources */,
 				F853B6251C23B119004B4331 /* UserControlViewController.m in Sources */,

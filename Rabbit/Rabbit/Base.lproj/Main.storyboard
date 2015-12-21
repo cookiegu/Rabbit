@@ -198,7 +198,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gkQ-cR-1zF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="-1" width="320" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -211,10 +211,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="活力全开" id="TPQ-Lt-yYf"/>
+                    <connections>
+                        <segue destination="7Xj-7K-oaN" kind="push" identifier="showItemDetail" id="eyt-vJ-0bF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Mg-6t-OIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205" y="-264"/>
+            <point key="canvasLocation" x="1137" y="-264"/>
+        </scene>
+        <!--Home Item Detail Table View Controller-->
+        <scene sceneID="jc7-FL-OIs">
+            <objects>
+                <tableViewController id="7Xj-7K-oaN" customClass="HomeItemDetailTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="G5G-a0-3Hi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemDetailCell" id="9jn-DS-g5j">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9jn-DS-g5j" id="Mcw-lW-9Rq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Xj-7K-oaN" id="3XW-eT-bAk"/>
+                            <outlet property="delegate" destination="7Xj-7K-oaN" id="RQh-2w-8WD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Qm6-wU-nsE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83t-pS-ch3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-264"/>
         </scene>
         <!--首页-->
         <scene sceneID="T14-gA-2D1">
