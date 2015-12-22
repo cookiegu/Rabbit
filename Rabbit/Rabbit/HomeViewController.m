@@ -14,7 +14,7 @@
     [super viewDidLoad];
 
     PFQuery *itemQuery = [PFQuery queryWithClassName:@"Item"];
-    [itemQuery whereKey:@"isAvailable" equalTo:@"true"];
+    //[itemQuery whereKey:@"isAvailable" equalTo:@"true"];
     //[itemQuery orderByDescending:@"createdAt"];
     [itemQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
@@ -59,6 +59,7 @@
 
 // did select cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     // enter the item detail view controller
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
