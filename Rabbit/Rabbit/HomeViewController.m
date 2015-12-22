@@ -7,21 +7,22 @@
 //
 
 #import "HomeViewController.h"
-#import <Parse/Parse.h>
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //PFQuery *query = [PFQuery queryWithClassName:@"Item"];
-    PFQuery *userQuery = [PFUser query];
-    [userQuery orderByAscending:@"username"];
-    [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    PFQuery *itemQuery = [PFQuery queryWithClassName:@"Item"];
+    [itemQuery whereKey:@"isAvailable" equalTo:@"true"];
+    //[itemQuery orderByDescending:@"createdAt"];
+    [itemQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error) {
             NSLog(@"Error: %@, %@", error, [error userInfo]);
         } else {
-            self.allUsers = objects;
+            self.allAvailableItems = objects;
+            // get current user
+            self.currentUser = [PFUser currentUser];
             // do not forget reload data!
             [self.tableView reloadData];
         }
@@ -40,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.allUsers count];
+    return [self.allAvailableItems count];
 }
 
 // setup tableview
@@ -48,21 +49,31 @@
     static NSString *CellIdentifier = @"ItemCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    PFUser *user = [self.allUsers objectAtIndex:indexPath.row];
+    PFObject *item = [self.allAvailableItems objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = user.username;
+    cell.textLabel.text = [item objectForKey:@"name"];
     // Configure the cell...
-    
+
     return cell;
 }
 
 // did select cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // enter the item detail view controller
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
 
-    [self performSegueWithIdentifier:@"showItemDetail" sender:self];
+    PFRelation *likeRelaton = [self.currentUser relationForKey:@"likeRelation"];
+    PFObject *item = [self.allAvailableItems objectAtIndex:indexPath.row];
+    [likeRelaton addObject:item];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (!error) {
+            NSLog(@"saving currentUser succeeded");
+        } else {
+            NSLog(@"Error %@ %@", error, [error userInfo]);
+        }
+    }];
+    //[self performSegueWithIdentifier:@"showItemDetail" sender:self];
     
 }
 

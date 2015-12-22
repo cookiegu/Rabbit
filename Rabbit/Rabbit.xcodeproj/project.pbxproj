@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57982DEC1C1C64FA00B20E63 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57982DEB1C1C64FA00B20E63 /* HomeViewController.m */; };
 		57DD71621C22F57D007B52B5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71601C22F57D007B52B5 /* Bolts.framework */; };
 		57DD71631C22F57D007B52B5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71611C22F57D007B52B5 /* Parse.framework */; };
 		57DD71661C22F5C7007B52B5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DD71651C22F5C7007B52B5 /* AudioToolbox.framework */; };
@@ -28,6 +27,7 @@
 		F84CA1701C1829860011526A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84CA16E1C1829860011526A /* LaunchScreen.storyboard */; };
 		F853B6251C23B119004B4331 /* UserControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F853B6241C23B119004B4331 /* UserControlViewController.m */; };
 		F8E6EB391C280D8500D372C4 /* HomeItemDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E6EB381C280D8500D372C4 /* HomeItemDetailTableViewController.m */; };
+		F8EE90781C292F140077BB17 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57982DEB1C1C64FA00B20E63 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,8 +234,8 @@
 				F84CA1651C1829860011526A /* AppDelegate.m in Sources */,
 				F8E6EB391C280D8500D372C4 /* HomeItemDetailTableViewController.m in Sources */,
 				F84CA1621C1829860011526A /* main.m in Sources */,
-				57982DEC1C1C64FA00B20E63 /* HomeViewController.m in Sources */,
 				F853B6251C23B119004B4331 /* UserControlViewController.m in Sources */,
+				F8EE90781C292F140077BB17 /* HomeViewController.m in Sources */,
 				57DD717A1C22F682007B52B5 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

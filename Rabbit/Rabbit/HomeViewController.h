@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface HomeViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *allUsers;
+@property (nonatomic, strong) NSArray *allAvailableItems;
+@property (nonatomic, strong) PFUser *currentUser;
 
 @end
